@@ -4,10 +4,25 @@
 #
 server.name: kibana
 server.host: 0.0.0.0
-elasticsearch.hosts: [ "http://elasticsearch:9200" ]
+elasticsearch.hosts: [
+    "${ES_0_URI}"
+]
 monitoring.ui.container.elasticsearch.enabled: true
 
 ## X-Pack security credentials
 #
-elasticsearch.username: elastic
-elasticsearch.password: changeme
+elasticsearch.username: ${KB_ES_USR}
+elasticsearch.password: ${KB_ES_PWD}
+
+## SameSite cookies configuration
+## Solves Chrome iframe login loop.
+## Source: https://github.com/elastic/kibana/pull/68108
+#
+# xpack.security.sameSiteCookies: None
+# xpack.security.secureCookies: true
+# server.ssl:
+#     enabled: true
+#     key: packages/kbn-dev-utils/certs/kibana.key
+#     certificate: packages/kbn-dev-utils/certs/kibana.crt
+#     certificateAuthorities: packages/kbn-dev-utils/certs/ca.crt
+#     clientAuthentication: optional
