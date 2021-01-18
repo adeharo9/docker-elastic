@@ -17,7 +17,7 @@ This project comes out of [`deviantony/docker-elk`](https://github.com/devianton
 
 2. Clone this repository:
 
-    `git@github.com:adeharo9/docker-elastic.git`
+    `git clone git@github.com:adeharo9/docker-elastic.git`
 
 3. Start services:
 
