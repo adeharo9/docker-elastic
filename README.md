@@ -15,7 +15,9 @@ This project comes out of [`deviantony/docker-elk`](https://github.com/devianton
 
     [https://github.com/deviantony/docker-elk#host-setup](https://github.com/deviantony/docker-elk#host-setup)
 
-2. Clone the repository.
+2. Clone this repository:
+
+    `git@github.com:adeharo9/docker-elastic.git`
 
 3. Start services:
 
@@ -48,10 +50,6 @@ This project comes out of [`deviantony/docker-elk`](https://github.com/devianton
     [http://localhost:5601](http://localhost:5601)
 
 ## Network & ports
-
-Since this setup is intended to be accessed from and access to multiple locations, most probably out of the Docker environment, all of the services are running in **host network mode**.
-
-This implies that applications run as if running in the host machine and bind to host machine ports and IPs, which imply they must be available for the underlying services.
 
 By default, configured ports are:
 
