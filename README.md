@@ -1,6 +1,6 @@
-# ElasticSearch + Kibana on Docker
+# Elasticsearch + Kibana on Docker
 
-This project comes out of [`deviantony/docker-elk`](https://github.com/deviantony/docker-elk) repository template. It builds a subset of the Elastic stack on Docker, namely ElasticSearch and Kibana.
+This project comes out of [`deviantony/docker-elk`](https://github.com/deviantony/docker-elk) repository template. It builds a subset of the Elastic stack on Docker, namely Elasticsearch and Kibana.
 
 ## Table of contents
 
@@ -58,7 +58,7 @@ By default, configured ports are:
 - Kibana:
   - `5601`
 
-- ElasticSearch:
+- Elasticsearch:
   - `9200`
   - `9300`
 
