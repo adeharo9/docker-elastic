@@ -23,7 +23,8 @@ services:
             # Use single node discovery in order to disable production mode and avoid bootstrap checks.
             # see: https://www.elastic.co/guide/en/elasticsearch/reference/7.10/bootstrap-checks.html
             discovery.type: single-node
-        network_mode: host
+        networks:
+            - elk
 
     kibana:
         build:
@@ -37,11 +38,16 @@ services:
               read_only: true
         ports:
             - "5601:5601"
+        networks:
+            - elk
         env_file:
             - kibana/kibana.env
-        network_mode: host
         depends_on:
             - elasticsearch
+
+networks:
+    elk:
+        driver: bridge
 
 volumes:
     elasticsearch:
